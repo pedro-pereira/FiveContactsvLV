@@ -4,16 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".main.activities.PerfilUsuario_Activity">
+    tools:context=".main.activities.PerfilUsuarioActivity">
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bnv"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="#FFFFFF"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/activity_main_bottom_actions" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/constraintLayout"
@@ -22,7 +14,7 @@
         android:layout_marginStart="15dp"
         android:layout_marginTop="70dp"
         android:layout_marginEnd="15dp"
-        android:background="#88FCD3C6"
+        android:background="#DBE4F9"
         android:paddingBottom="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -30,15 +22,15 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/tvMensagem"
+            android:id="@+id/txvBemVindo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Alterar Dados"
+            android:text="Perfil - Edição"
             android:textAlignment="center"
-            android:textColor="#FF5722"
+            android:textColor="#9764AA"
             android:textColorLink="#FFFFFF"
             android:textSize="30sp"
             android:textStyle="bold"
@@ -48,105 +40,116 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/edT_Login2"
+            android:id="@+id/edtNovoLogin"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="20dp"
             android:background="#FFFFFF"
             android:ems="10"
+            android:hint="  Usuário"
             android:inputType="textPersonName"
-            android:text="  Usuário"
             android:textAlignment="viewStart"
-            android:textColor="#FF5722"
+            android:textColor="#9764AA"
             android:textColorLink="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edtNome" />
+            app:layout_constraintTop_toBottomOf="@+id/txvBemVindo" />
 
         <EditText
-            android:id="@+id/edt_Pass2"
+            android:id="@+id/edtNovoSenha"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#FFFFFF"
             android:ems="10"
+            android:hint="  Senha"
             android:inputType="text"
-            android:text="  Senha"
             android:textAlignment="viewStart"
-            android:textColor="#FF5722"
+            android:textColor="#9764AA"
             android:textColorLink="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edT_Login2" />
+            app:layout_constraintTop_toBottomOf="@+id/edtNovoEmail" />
 
         <Button
             android:id="@+id/btCriar"
             android:layout_width="271dp"
             android:layout_height="55dp"
             android:layout_marginTop="30dp"
-            android:background="#FF5722"
-            android:text="Modificar"
+            android:background="#9764AA"
+            android:text="Salvar"
             android:textColor="#FFFFFF"
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.563"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/swLogado" />
+            app:layout_constraintTop_toBottomOf="@+id/swtEdicaoTema" />
 
         <EditText
-            android:id="@+id/edtNome"
+            android:id="@+id/edtNovoNome"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="10dp"
             android:background="#FFFFFF"
             android:ems="10"
+            android:hint="  Nome"
             android:inputType="textPersonName"
-            android:text="  Nome"
             android:textAlignment="viewStart"
-            android:textColor="#FF5722"
+            android:textColor="#9764AA"
             android:textColorLink="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvMensagem" />
+            app:layout_constraintTop_toBottomOf="@+id/edtNovoLogin" />
 
         <Switch
-            android:id="@+id/swLogado"
+            android:id="@+id/swtEdicaoLogado"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:showText="false"
             android:text="Manter Logado?"
-            android:textColor="#FF5722"
+            android:textColor="#9764AA"
             android:textOff="Não"
             android:textOn="Sim"
             android:textSize="24sp"
-            android:textStyle="bold"
-            app:layout_constraintStart_toStartOf="@+id/edEmail"
-            app:layout_constraintTop_toBottomOf="@+id/edEmail" />
+            app:layout_constraintStart_toStartOf="@+id/edtNovoSenha"
+            app:layout_constraintTop_toBottomOf="@+id/edtNovoSenha" />
+
+        <Switch
+            android:id="@+id/swtEdicaoTema"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tema escuro?"
+            android:textColor="#9764AA"
+            android:textOff="Não"
+            android:textOn="Sim"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="@+id/swtEdicaoLogado"
+            app:layout_constraintTop_toBottomOf="@+id/swtEdicaoLogado" />
 
         <EditText
-            android:id="@+id/edEmail"
+            android:id="@+id/edtNovoEmail"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:background="#FFFFFF"
             android:ems="10"
-            android:text="  E-mail"
+            android:hint="  E-mail"
             android:textAlignment="viewStart"
-            android:textColor="#FF5722"
+            android:textColor="#9764AA"
             android:textColorLink="#FFFFFF"
             android:textSize="24sp"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.563"
+            app:layout_constraintHorizontal_bias="0.557"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/edt_Pass2" />
+            app:layout_constraintTop_toBottomOf="@+id/edtNovoNome" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>
